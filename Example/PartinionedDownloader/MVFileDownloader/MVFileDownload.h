@@ -14,23 +14,28 @@
 -(void)fileDownloadDidFinished:(NSURL*)url savedAt:(NSURL*)savedUrl;
 -(void)fileDownloadDidFailed:(NSError*)aError;
 -(void)fileDownloadDidStartd:(NSURL*)url;
+-(void)fileDownloadProgress:(double)progress;
 @end
 
 
-@interface MVFileDownload : NSObject<FilePartDelegate>{
+@interface MVFileDownload : NSObject<FilePartDelegate,NSURLSessionDelegate>{
     NSInteger totalPartsPending;
+    NSInteger overallReceivedSize;
+    NSURLSession *session;
 }
 
-@property(nonatomic,readonly)NSURL *downloadUrl;
-@property(nonatomic,readonly)NSInteger expectedSize;
-@property(nonatomic,strong)NSMutableArray *mutArrParts;
-@property(nonatomic,strong)id <FileDownloadDelegate> delegate;
-@property(nonatomic,strong)NSString *fileName;
-@property(nonatomic,readonly)NSString *contentType;
+@property(nonatomic,readonly)   NSURL *downloadUrl;
+@property(nonatomic,readonly)   NSInteger expectedSize;
+@property(nonatomic,assign)     NSInteger totalFragment;
+@property(nonatomic,strong)     NSMutableArray *mutArrParts;
+@property(nonatomic,strong)     id <FileDownloadDelegate> delegate;
+@property(nonatomic,strong)     NSString *fileName;
+@property(nonatomic,readonly)   NSString *contentType;
 
 -(instancetype)initWithURL:(NSURL*)fileUrl;
 
 -(void)startDownload;
 -(void)startDownloadWith:(NSURL*)fileUrl;
 +(instancetype)startDownloadWithURL:(NSURL*)fileUrl;
+-(void)pause;
 @end
