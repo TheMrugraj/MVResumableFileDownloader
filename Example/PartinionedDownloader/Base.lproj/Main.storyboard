@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,27 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fiw-eU-sem">
-                                <rect key="frame" x="238" y="201" width="125" height="47"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osp-rT-yVa">
+                                <rect key="frame" x="16" y="72" width="57" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="QDu-Gx-5s0"/>
-                                    <constraint firstAttribute="width" constant="125" id="xJT-TM-cVZ"/>
+                                    <constraint firstAttribute="width" constant="57" id="AkI-Pr-72M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-Ta-Cex">
-                                <rect key="frame" x="71" y="80" width="57" height="30"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnStopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N13-sm-4SR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osp-rT-yVa">
-                                <rect key="frame" x="76" y="118" width="57" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,15 +29,84 @@
                                     <action selector="btnStartAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="06J-vL-vaT"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xa8-5b-oY1">
+                                <rect key="frame" x="16" y="141" width="568" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="flG-KT-FVe"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0fj-5d-bqp">
+                                <rect key="frame" x="16" y="221" width="568" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="sAq-ax-Wg6"/>
+                                </constraints>
+                            </progressView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mK8-Sb-yCf">
+                                <rect key="frame" x="16" y="299" width="568" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="eqq-mT-Rca"/>
+                                </constraints>
+                            </progressView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-Ta-Cex">
+                                <rect key="frame" x="81" y="72" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="G1k-Jf-PR0"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N13-sm-4SR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading using Segmented Technique" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saT-mT-KUE">
+                                <rect key="frame" x="16" y="110" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fa0-MN-ILS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading using Normal URL Connection Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-Cf-pgy">
+                                <rect key="frame" x="16" y="187" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="YIg-Zs-mf4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Fiw-eU-sem" secondAttribute="centerX" constant="-0.5" id="435-2i-WP7"/>
-                            <constraint firstAttribute="centerY" secondItem="Fiw-eU-sem" secondAttribute="centerY" constant="75.5" id="tGa-gn-aDm"/>
+                            <constraint firstItem="Xa8-5b-oY1" firstAttribute="top" secondItem="osp-rT-yVa" secondAttribute="bottom" constant="39" id="4kz-Wb-dCx"/>
+                            <constraint firstItem="osp-rT-yVa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="D2C-ee-9fh"/>
+                            <constraint firstItem="Xa8-5b-oY1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="GUv-pS-HUS"/>
+                            <constraint firstItem="0fj-5d-bqp" firstAttribute="top" secondItem="hyn-Cf-pgy" secondAttribute="bottom" constant="13" id="J7K-l3-0ex"/>
+                            <constraint firstItem="0fj-5d-bqp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="QDB-vA-Mrq"/>
+                            <constraint firstItem="osp-rT-yVa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="Rnv-HT-pcA"/>
+                            <constraint firstItem="mK8-Sb-yCf" firstAttribute="width" secondItem="0fj-5d-bqp" secondAttribute="width" id="SKi-Tk-L5w"/>
+                            <constraint firstItem="mK8-Sb-yCf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="WLt-rH-yBU"/>
+                            <constraint firstItem="Xa8-5b-oY1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="X6X-1G-NXD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hyn-Cf-pgy" secondAttribute="trailing" id="ZNi-CN-0Yj"/>
+                            <constraint firstItem="0fj-5d-bqp" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="c2c-xa-ZEU"/>
+                            <constraint firstItem="mK8-Sb-yCf" firstAttribute="top" secondItem="0fj-5d-bqp" secondAttribute="bottom" constant="76" id="cui-8v-u8y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="saT-mT-KUE" secondAttribute="trailing" id="hi9-mr-R19"/>
+                            <constraint firstItem="0fj-5d-bqp" firstAttribute="top" secondItem="Xa8-5b-oY1" secondAttribute="bottom" constant="78" id="lQh-71-HUb"/>
+                            <constraint firstItem="osp-rT-yVa" firstAttribute="top" secondItem="bdH-Ta-Cex" secondAttribute="top" id="mhX-VW-q5N"/>
+                            <constraint firstItem="bdH-Ta-Cex" firstAttribute="leading" secondItem="osp-rT-yVa" secondAttribute="trailing" constant="8" id="ody-Xo-JMv"/>
+                            <constraint firstItem="saT-mT-KUE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pDm-UU-4G0"/>
+                            <constraint firstItem="Xa8-5b-oY1" firstAttribute="top" secondItem="saT-mT-KUE" secondAttribute="bottom" constant="10" id="rbp-Yf-xVr"/>
+                            <constraint firstItem="hyn-Cf-pgy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xoi-m9-vtV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lblProgress" destination="Fiw-eU-sem" id="sg1-Qt-LjI"/>
+                        <outlet property="lblAccelerated" destination="saT-mT-KUE" id="KXx-f2-Wae"/>
+                        <outlet property="lblNormal" destination="hyn-Cf-pgy" id="wCl-fB-RmP"/>
+                        <outlet property="progressJG" destination="mK8-Sb-yCf" id="25q-k8-d5j"/>
+                        <outlet property="progressTwoView" destination="0fj-5d-bqp" id="glq-Ms-5jM"/>
+                        <outlet property="progressView" destination="Xa8-5b-oY1" id="Ef0-ef-PXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

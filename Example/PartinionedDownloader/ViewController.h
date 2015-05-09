@@ -10,7 +10,8 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *lblProgress;
-
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressTwoView,*progressJG;
+@property (weak, nonatomic) IBOutlet UILabel *lblNormal, *lblAccelerated;
 @end
 

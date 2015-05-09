@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PartinionedDownloader/MVFileDownloader/MVFileDownload.m"
-            timestampString = "452605495.169777"
+            timestampString = "452760352.594553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "-pause"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "-URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
