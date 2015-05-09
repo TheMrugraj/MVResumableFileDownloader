@@ -33,9 +33,8 @@
 @property(nonatomic,readonly)   NSString *contentType;
 
 -(instancetype)initWithURL:(NSURL*)fileUrl;
-
 -(void)startDownload;
 -(void)startDownloadWith:(NSURL*)fileUrl;
-+(instancetype)startDownloadWithURL:(NSURL*)fileUrl;
++(instancetype)startDownloadWithURL:(NSURL*)fileUrl delegate:(id<FileDownloadDelegate>)delegate;
 -(void)pause;
 @end

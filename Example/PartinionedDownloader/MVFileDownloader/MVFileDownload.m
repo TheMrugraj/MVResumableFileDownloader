@@ -12,11 +12,12 @@ MVFileDownload *instance=nil;
 
 @implementation MVFileDownload
 
-+(instancetype)startDownloadWithURL:(NSURL *)fileUrl{
++(instancetype)startDownloadWithURL:(NSURL*)fileUrl delegate:(id<FileDownloadDelegate>)delegate{
     if(!instance){
         instance = [[MVFileDownload alloc]initWithURL:fileUrl];
     }
-    instance.totalFragment = 2;
+    instance.delegate =delegate;
+    instance.totalFragment = 4;
     [instance startDownload];
     return instance;
 }
@@ -41,10 +42,7 @@ MVFileDownload *instance=nil;
 -(void)startDownload{
     
     _totalFragment = (_totalFragment<=0?1:_totalFragment);
-    if([_delegate respondsToSelector:@selector(fileDownloadDidStartd:)]){
-        [_delegate fileDownloadDidStartd:_downloadUrl];
-    }
-    if(!_mutArrParts){
+        if(!_mutArrParts){
         _mutArrParts = [NSMutableArray array];
     }
     
@@ -54,6 +52,10 @@ MVFileDownload *instance=nil;
         return;
     }
     
+    if([_delegate respondsToSelector:@selector(fileDownloadDidStartd:)]){
+        [_delegate fileDownloadDidStartd:_downloadUrl];
+    }
+
     
     
     NSInteger intFragment = _expectedSize/_totalFragment;
@@ -168,14 +170,14 @@ MVFileDownload *instance=nil;
 }
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     // Calculate Progress
-    overallReceivedSize+=bytesWritten;
+    overallReceivedSize+=downloadTask.countOfBytesReceived;
     
     double progress = (double)totalBytesWritten / (double)totalBytesExpectedToWrite;
     double overallProgress = (double)overallReceivedSize/(double)_expectedSize;
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"Downloaded %ld : %lf",downloadTask.taskIdentifier,progress);
         if([_delegate respondsToSelector:@selector(fileDownloadProgress:)]){
-            [_delegate fileDownloadProgress:overallProgress/(1.0*_totalFragment)];
+            [_delegate fileDownloadProgress:overallProgress/(1.0)];
         }
     });
 }
