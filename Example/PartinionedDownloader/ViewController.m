@@ -2,15 +2,15 @@
 //  ViewController.m
 //  PartinionedDownloader
 //
-//  Created by indianic on 02/05/15.
-//  Copyright (c) 2015 IndiaNIC. All rights reserved.
+//  Created by Mrugrajsinh Vansadia on 02/05/15.
+//  Copyright (c) 2015 Mrugrajsinh Vansadia. All rights reserved.
 
 
 
 #import "ViewController.h"
 #import "MVFileDownloader.h"
 
-#define aStrUrl @"https://www.dropbox.com/s/m5ie72rnq86sa48/Ehsaan%20hoga.mp3?dl=1"//@"http://clippy.indianic.net/fonts/Clippy_1.1.dmg" //@"https://www.dropbox.com/s/ffbm0e20de5614k/Laadki_-_Sachin-Jigar_-_Coke_Studio_MTV_Season_4%28MyMp3Song.Com%29.mp3?dl=1"//
+#define aStrUrl @"https://www.dropbox.com/s/m5ie72rnq86sa48/Ehsaan%20hoga.mp3?dl=1"//@"http://clippy.Mrugrajsinh Vansadia.net/fonts/Clippy_1.1.dmg" //@"https://www.dropbox.com/s/ffbm0e20de5614k/Laadki_-_Sachin-Jigar_-_Coke_Studio_MTV_Season_4%28MyMp3Song.Com%29.mp3?dl=1"//
 @interface ViewController ()<FileDownloadDelegate,FilePartDelegate>
 {
     MVFileDownload *downloadTask;
@@ -35,8 +35,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)viewDidAppear:(BOOL)animated{
-////@"http://clippy.indianic.net/fonts/Clippy_1.1.dmg"
-//    NSString *aStr = @"https://www.dropbox.com/s/ffbm0e20de5614k/Laadki_-_Sachin-Jigar_-_Coke_Studio_MTV_Season_4%28MyMp3Song.Com%29.mp3?dl=1";//@"https://www.dropbox.com/s/m5ie72rnq86sa48/Ehsaan%20hoga.mp3?dl=1";//// @"http://www.hdimagewallpaper.com/wp-content/uploads/2015/04/Colourful-Apples-HD-1-10167-HD-Images-Wallpapers.jpg"; //
     downloadTask = [MVFileDownload startDownloadWithURL:[NSURL URLWithString:aStrUrl] delegate:self];
 }
 - (void)didReceiveMemoryWarning {
