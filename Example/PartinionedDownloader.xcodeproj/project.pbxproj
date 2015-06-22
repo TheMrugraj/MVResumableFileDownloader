@@ -15,7 +15,7 @@
 		A97D901A1AF4BF53007153EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97D90181AF4BF53007153EC /* LaunchScreen.xib */; };
 		A97D90261AF4BF53007153EC /* PartinionedDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D90251AF4BF53007153EC /* PartinionedDownloaderTests.m */; };
 		A97D90321AF4BF9E007153EC /* MVFileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A97D90311AF4BF9E007153EC /* MVFileDownloadManager.m */; };
-		A9EF858D1AF4CA0C0064B2AE /* MVFileDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */; };
+		A9EF858D1AF4CA0C0064B2AE /* MVFileDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */; };
 		A9EF85901AF4CDBE0064B2AE /* MVFilePart.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF858F1AF4CDBE0064B2AE /* MVFilePart.m */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +46,8 @@
 		A97D90301AF4BF9E007153EC /* MVFileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVFileDownloadManager.h; sourceTree = "<group>"; };
 		A97D90311AF4BF9E007153EC /* MVFileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVFileDownloadManager.m; sourceTree = "<group>"; };
 		A97D90361AF4C000007153EC /* MVFileDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVFileDownloader.h; sourceTree = "<group>"; };
-		A9EF858B1AF4CA0C0064B2AE /* MVFileDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVFile\U0010Download.h"; sourceTree = "<group>"; };
-		A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MVFile\U0010Download.m"; sourceTree = "<group>"; };
+		A9EF858B1AF4CA0C0064B2AE /* MVFileDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVFileDownload.h; sourceTree = "<group>"; };
+		A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVFileDownload.m; sourceTree = "<group>"; };
 		A9EF858E1AF4CDBE0064B2AE /* MVFilePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVFilePart.h; sourceTree = "<group>"; };
 		A9EF858F1AF4CDBE0064B2AE /* MVFilePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVFilePart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,8 +136,8 @@
 				A97D90301AF4BF9E007153EC /* MVFileDownloadManager.h */,
 				A97D90311AF4BF9E007153EC /* MVFileDownloadManager.m */,
 				A97D90361AF4C000007153EC /* MVFileDownloader.h */,
-				A9EF858B1AF4CA0C0064B2AE /* MVFileDownload.h */,
-				A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */,
+				A9EF858B1AF4CA0C0064B2AE /* MVFileDownload.h */,
+				A9EF858C1AF4CA0C0064B2AE /* MVFileDownload.m */,
 				A9EF858E1AF4CDBE0064B2AE /* MVFilePart.h */,
 				A9EF858F1AF4CDBE0064B2AE /* MVFilePart.m */,
 			);
@@ -253,7 +253,7 @@
 				A97D90121AF4BF53007153EC /* ViewController.m in Sources */,
 				A97D900F1AF4BF53007153EC /* AppDelegate.m in Sources */,
 				A9EF85901AF4CDBE0064B2AE /* MVFilePart.m in Sources */,
-				A9EF858D1AF4CA0C0064B2AE /* MVFileDownload.m in Sources */,
+				A9EF858D1AF4CA0C0064B2AE /* MVFileDownload.m in Sources */,
 				A97D900C1AF4BF53007153EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
